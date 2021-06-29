@@ -93,7 +93,7 @@ function parseLine()
         let tsOld = currentTextSize;
         if(textWidth(arr[i]) + 15 > windowWidth)
         {
-          while(textWidth(line) + 15 > windowWidth)
+          while(textWidth(arr[i]) + 15 > windowWidth)
           {
             setTextSize(currentTextSize - 1);
           }
