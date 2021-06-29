@@ -1,7 +1,7 @@
 this is test data
 {i}testIcon.png
 more test data
-{p}data2.txt{a}next page
+{a}data2.txt{l}next page
 more test data again
 {i}tileMap.png
 even more test data
