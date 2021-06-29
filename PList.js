@@ -10,7 +10,7 @@ function setup() {
   file = params.file;
   if(file == null)
   {
-    file = 'data';
+    file = 'main';
   }
   loadStrings(file, loaded, loadErr);
   createCanvas(600, 600);
