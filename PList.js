@@ -1,12 +1,15 @@
 let result;
 let error;
-let currentLine = 15;
+let currentLine = 20;
 let line = ' ';
 let file;
 let defaultURL = "";
 let currentTextSize = 15;
+let w, h;
 
 function setup() {
+  w = windowWidth;
+  h = windowHeight;
   let params = getURLParams();
   file = params.file;
   if(file == null)
@@ -14,7 +17,7 @@ function setup() {
     file = 'main';
   }
   loadStrings(file, loaded, loadErr);
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(w, h);
 }
 
 function loadErr(error)
@@ -38,12 +41,13 @@ function loaded(result)
   }
 }
 
-function draw() {
-  
-}
-
 function parseLine()
 {
+  if(currentLine + 15 > h)
+  {
+    h = currentLine + 15;
+    resizeCanvas(w, h);
+  }
   textSize(currentTextSize);
   if(match(line, '{i}') != null)
   {
@@ -76,18 +80,42 @@ function parseLine()
     let arr = split(line, 's}');
     let str;
     str = arr[1];
-    textSize(int(str));
-    currentTextSize = int(str);
+    setTextSize(int(str));
   }
   else
   {
-    let lines = [];
-    if(textWidth(line > windowWidth))
+    if(match(line, '{n}') != null)
     {
-      
+      arr = split(line, '{n}');
+      let i = 0;
+      while(arr[i] != null)
+      {
+        let tsOld = currentTextSize;
+        if(textWidth(arr[i]) + 15 > windowWidth)
+        {
+          while(textWidth(line) + 15 > windowWidth)
+          {
+            setTextSize(currentTextSize - 1);
+          }
+        }
+        text(arr[i], 10, currentLine);
+        currentLine += currentTextSize * 2;
+        setTextSize(tsOld);
+        i++;
+      }
+      return;
+    }
+    let tsOld = currentTextSize;
+    if(textWidth(line) + 15 > windowWidth)
+    {
+      while(textWidth(line) + 15 > windowWidth)
+      {
+        setTextSize(currentTextSize - 1);
+      }
     }
     text(line, 10, currentLine);
     currentLine += currentTextSize * 1.5;
+    setTextSize(tsOld);
   }
 }
 
@@ -96,4 +124,10 @@ function drawImage(str, imageLine)
   loadImage(str, img => {
     image(img, 10, imageLine, 150, 150);
   });
+}
+
+function setTextSize(size)
+{
+  currentTextSize = size;
+  textSize(size);
 }
