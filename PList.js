@@ -53,15 +53,15 @@ function parseLine()
     drawImage(str, imgL);
     currentLine += 10;
   }
-  else if(match(line, '{p}') != null)
+  else if(match(line, '{a}') != null)
   {
-    let arr = split(line, 'p}');
+    let arr = split(line, 'a}');
     let str;
     str = arr[1];
     let name = str;
-    if(match(str, '{a}') != null)
+    if(match(str, '{l}') != null)
     {
-      arr = split(str, '{a}');
+      arr = split(str, '{l}');
       str = arr[0];
       name = arr[1];
     }
