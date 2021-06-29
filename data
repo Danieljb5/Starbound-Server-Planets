@@ -1,7 +1,8 @@
 this is test data
-{i}testIcon.png
+{i}builtin/snow.png
 more test data
 {a}data2.txt{l}next page
 more test data again
-{i}tileMap.png
+{i}builtin/magma.png
+{i}builtin/fiery_star.png
 even more test data
