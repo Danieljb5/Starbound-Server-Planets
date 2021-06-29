@@ -82,8 +82,3 @@ function drawImage(str, imageLine)
     image(img, 10, imageLine * 15, 150, 150);
   });
 }
-
-function buttonPress()
-{
-  loadPage(1);
-}
