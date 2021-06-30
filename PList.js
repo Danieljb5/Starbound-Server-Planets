@@ -14,7 +14,7 @@ function setup() {
   file = params.file;
   if(file == null)
   {
-    file = 'main';
+    file = 'main.dat';
   }
   loadStrings(file, loaded, loadErr);
   createCanvas(w, h);
