@@ -72,15 +72,7 @@ function parseLine()
       str = arr[0];
       name = arr[1];
     }
-    let a;
-    if(str == "data/main")
-    {
-      a = createA("/", name);  
-    }
-    else
-    {
-      a = createA("?page=" + str, name);  
-    }
+    let a = createA("?page=" + str, name);
     a.position(10, currentLine - currentTextSize);
     a.style('color', '#aaaaff');
     currentLine += currentTextSize * 1.5;
