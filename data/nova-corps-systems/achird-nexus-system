@@ -1,0 +1,17 @@
+{a}data/main{l}Home
+{a}data/nova-corps-faction{l}Back
+{s}20
+Achird Nexus System
+{i}builtin/frozen_star.png
+{s}14
+This system is owned by the Nova Corps.
+  
+Star type: frozen
+Planets:
+{a}data/nova-corps-systems/achird-nexus/achird-nexus-I{l}Achird Nexus I
+{a}data/nova-corps-systems/achird-nexus/achird-nexus-II{l}Achird Nexus II
+{a}data/nova-corps-systems/achird-nexus/achird-nexus-III{l}Achird Nexus III
+{a}data/nova-corps-systems/achird-nexus/achird-nexus-IV{l}Achird Nexus IV
+{a}data/nova-corps-systems/achird-nexus/achird-nexus-V{l}Achird Nexus V
+{a}data/nova-corps-systems/achird-nexus/achird-nexus-VI{l}Achird Nexus VI
+{a}data/nova-corps-systems/achird-nexus/achird-nexus-VII{l}Achird Nexus VII

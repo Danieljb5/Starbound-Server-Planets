@@ -3,7 +3,6 @@ let error;
 let currentLine = 20;
 let line = ' ';
 let file;
-let defaultURL = "";
 let currentTextSize = 15;
 let w, h;
 
@@ -11,10 +10,10 @@ function setup() {
   w = windowWidth;
   h = windowHeight;
   let params = getURLParams();
-  file = params.file;
+  file = params.page;
   if(file == null)
   {
-    file = 'main.dat';
+    file = 'data/main';
   }
   loadStrings(file, loaded, loadErr);
   createCanvas(w, h);
@@ -28,7 +27,7 @@ function loadErr(error)
 
 function loaded(result)
 {
-  background(255);
+  background(37.0, 38.0, 41.7);
   let i = 0;
   while(line != '')
   {
@@ -49,6 +48,8 @@ function parseLine()
     resizeCanvas(w, h);
   }
   textSize(currentTextSize);
+  noStroke();
+  fill(255);
   if(match(line, '{i}') != null)
   {
     let arr = split(line, 'i}');
@@ -71,8 +72,17 @@ function parseLine()
       str = arr[0];
       name = arr[1];
     }
-    let a = createA(defaultURL + "?file=" + str, name);
+    let a;
+    if(str == "data/main")
+    {
+      a = createA("/", name);  
+    }
+    else
+    {
+      a = createA("?page=" + str, name);  
+    }
     a.position(10, currentLine - currentTextSize);
+    a.style('color', '#aaaaff');
     currentLine += currentTextSize * 1.5;
   }
   else if(match(line, '{s}') != null)

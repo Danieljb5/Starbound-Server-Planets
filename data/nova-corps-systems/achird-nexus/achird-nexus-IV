@@ -1,0 +1,15 @@
+{a}data/main{l}Home
+{a}data/nova-corps-systems/achird-nexus-system{l}Back
+{s}20
+Achird Nexus IV
+{s}14
+  
+Planet Type: gas giant
+Moons: 1
+  
+{s}20
+Achird Nexus IV-a
+{i}builtin/savannah.png
+{s}14
+  
+Planet Type: savannah

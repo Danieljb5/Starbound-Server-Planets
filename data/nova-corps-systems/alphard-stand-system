@@ -1,0 +1,14 @@
+{a}data/main{l}Home
+{a}data/nova-corps-faction{l}Back
+{s}20
+Alphard Stand System
+{i}builtin/temperate_star.png
+{s}14
+This system is owned by the Nova Corps.
+  
+Star type: temperate
+Planets:
+{a}data/nova-corps-systems/alphard-stand/alphard-stand-II{l}Alphard Stand II
+{a}data/nova-corps-systems/alphard-stand/alphard-stand-III{l}Alphard Stand III
+{a}data/nova-corps-systems/alphard-stand/alphard-stand-IV{l}Alphard Stand IV
+{a}data/nova-corps-systems/alphard-stand/alphard-stand-V{l}Alphard Stand V

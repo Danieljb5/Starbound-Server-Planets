@@ -1,0 +1,11 @@
+{a}data/main{l}Home
+{a}data/nova-corps-systems/alphard-stand-system{l}Back
+{s}20
+Alphard Stand III
+{i}builtin/ocean.png
+{s}14
+  
+Planet Type: ocean
+Moons: 2
+Bases:
+Fueling station

@@ -1,10 +1,16 @@
-{s}16
+{a}data/main{l}Home
+{a}data/nova-corps-faction{l}Back
+{s}20
 Syzygy Cradle System
-{s}12
-This system is where the Nova Corps was founded.
 {i}builtin/gentle_star.png
-  
 {s}14
+This system is home to the planet where the Nova Corps was founded. It is owned by the Nova Corps.
+  
+Star type: gentle
 Planets:
-{s}12
 {a}data/nova-corps-systems/syzygy-cradle/syzygy-cradle-I{l}Syzygy Cradle I
+{a}data/nova-corps-systems/syzygy-cradle/syzygy-cradle-II{l}Syzygy Cradle II
+{a}data/nova-corps-systems/syzygy-cradle/syzygy-cradle-III{l}Syzygy Cradle III
+{a}data/nova-corps-systems/syzygy-cradle/syzygy-cradle-IV{l}Syzygy Cradle IV
+{a}data/nova-corps-systems/syzygy-cradle/syzygy-cradle-V{l}Syzygy Cradle V
+{a}data/nova-corps-systems/syzygy-cradle/station-HQ{l}Nova Corps Headquarters Station
