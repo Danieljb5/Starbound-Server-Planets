@@ -1,0 +1,11 @@
+{s}16
+Nova Corps Faction
+{s}12
+This is the first faction made on the server.
+  
+{s}14
+Systems:
+{s}12
+{a}data/nova-corps-systems/achird-nexus-system{l}Achird Nexus System
+{a}data/nova-corps-systems/alphard-stand-system{l}Alphard Stand System
+{a}data/nova-corps-systems/syzygy-cradle-system{l}Syzygy Cradle System
