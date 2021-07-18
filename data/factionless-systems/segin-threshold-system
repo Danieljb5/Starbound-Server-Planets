@@ -1,0 +1,14 @@
+{a}data/main{l}Home
+{a}data/factionless{l}Back
+{s}20
+Segin Threshold System
+{i}builtin/gentle_star.png
+{s}14
+This system is owned by a factionless player.
+  
+Star type: gentle
+Planets:
+{a}data/factionless-systems/segin-threshold/segin-threshold-I{l}Segin Threshold I
+{a}data/factionless-systems/segin-threshold/segin-threshold-II{l}Segin Threshold II
+{a}data/factionless-systems/segin-threshold/segin-threshold-III{l}Segin Threshold III
+{a}data/factionless-systems/segin-threshold/segin-threshold-IV{l}Segin Threshold IV
