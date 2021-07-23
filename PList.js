@@ -5,6 +5,7 @@ let line = ' ';
 let file;
 let currentTextSize = 15;
 let w, h;
+let canvasCreated = false;
 
 function setup() {
   w = windowWidth;
@@ -16,19 +17,28 @@ function setup() {
     file = 'data/main';
   }
   loadStrings(file, loaded, loadErr);
-  //createCanvas(w, h);
 }
 
 function reset()
 {
-  createCanvas(w, h, false);
+  w = windowWidth;
+  if(!canvasCreated)
+  {
+    createCanvas(w, h);
+    canvasCreated = true;
+  }
+  else
+  {
+    resizeCanvas(w, h, false);
+  }
   background(37.0, 38.0, 41.7);
   renderPage();
 }
 
 function loadErr(error)
 {
-  createCanvas(w, h);
+  createCanvas(w, h, false);
+  canvasCreated = true;
   background(255);
   text(error + " Could not load data file '" + file + "'.", 10, 10);
 }
@@ -41,38 +51,41 @@ function windowResized()
 function loaded(data)
 {
   result = data;
-  // let i = 0;
-  // while(line != '')
-  // {
-  //   if(line != '')
-  //   {
-  //     line = data[i];
-  //     getPageSize();
-  //     i++;
-  //   }
-  // }
+  line = ' ';
+  let i = 0;
+  while(line != '')
+  {
+    if(line != '')
+    {
+      line = data[i];
+      getPageSize();
+      i++;
+    }
+  }
   
-  // if(w != windowWidth || h != windowHeight)
-  // {
-  //   reset();
-  // }
-  // else
-  // {
+  if(h > windowHeight)
+  {
+    reset();
+  }
+  else
+  {
     renderPage();
-  // }
+  }
 }
 
 function renderPage()
 {
   currentLine = 20;
   createCanvas(w, h);
+  canvasCreated = true;
   background(37.0, 38.0, 41.7);
+  line = ' ';
   let i = 0;
   while(line != '')
   {
     if(line != '')
     {
-      line = reset[i];
+      line = result[i];
       parseLine();
       i++;
     }
